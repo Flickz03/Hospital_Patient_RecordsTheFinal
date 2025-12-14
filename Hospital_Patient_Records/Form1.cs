@@ -59,8 +59,10 @@ namespace Hospital_Patient_Records
             // 
             txtPassword.Location = new System.Drawing.Point(172, 121);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new System.Drawing.Size(293, 23);
             txtPassword.TabIndex = 1;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // cmbRole
             // 
