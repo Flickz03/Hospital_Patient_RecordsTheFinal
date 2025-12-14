@@ -79,6 +79,7 @@ namespace Hospital_Patient_Records
             btnLogin.TabIndex = 3;
             btnLogin.Text = "Log In";
             btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnRegister
             // 
@@ -88,7 +89,7 @@ namespace Hospital_Patient_Records
             btnRegister.TabIndex = 4;
             btnRegister.Text = "Register";
             btnRegister.UseVisualStyleBackColor = true;
-            btnRegister.Click += button2_Click;
+            btnRegister.Click += btnRegister_Click;
             // 
             // label1
             // 
@@ -141,6 +142,11 @@ namespace Hospital_Patient_Records
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
 
         }
