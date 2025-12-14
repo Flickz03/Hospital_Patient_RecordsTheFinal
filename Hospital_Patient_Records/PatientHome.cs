@@ -66,6 +66,7 @@ namespace Hospital_Patient_Records
         private Label label5;
         private Label lblDoctorNotes;
         private Label lblExcused;
+        private Button btnBack;
         private Label label7;
 
         private void InitializeComponent()
@@ -84,6 +85,7 @@ namespace Hospital_Patient_Records
             lblDoctorNotes = new Label();
             lblExcused = new Label();
             label7 = new Label();
+            btnBack = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
             // 
@@ -228,9 +230,20 @@ namespace Hospital_Patient_Records
             label7.TabIndex = 12;
             label7.Text = "Excused:";
             // 
+            // btnBack
+            // 
+            btnBack.Location = new System.Drawing.Point(-2, 1);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new System.Drawing.Size(93, 34);
+            btnBack.TabIndex = 14;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
             // PatientHome
             // 
             ClientSize = new System.Drawing.Size(976, 492);
+            Controls.Add(btnBack);
             Controls.Add(lblExcused);
             Controls.Add(label7);
             Controls.Add(lblDoctorNotes);
@@ -256,5 +269,22 @@ namespace Hospital_Patient_Records
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = Application.OpenForms["Form1"] as Form1;
+
+            if (form1 != null)
+            {
+                form1.txtEmail.Text = "";
+                form1.txtPassword.Text = "";
+                form1.Show();
+            }
+
+            this.Close();
+        }
+
+
+
     }
 }

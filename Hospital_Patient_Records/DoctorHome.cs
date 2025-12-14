@@ -31,9 +31,7 @@ namespace Hospital_Patient_Records
             label2 = new Label();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
-            dgvPatients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvPatients.MultiSelect = false;
-
+            btnBack = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvPatients).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -43,8 +41,10 @@ namespace Hospital_Patient_Records
             // 
             dgvPatients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPatients.Location = new System.Drawing.Point(74, 106);
+            dgvPatients.MultiSelect = false;
             dgvPatients.Name = "dgvPatients";
             dgvPatients.RowTemplate.Height = 25;
+            dgvPatients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPatients.Size = new System.Drawing.Size(777, 256);
             dgvPatients.TabIndex = 0;
             dgvPatients.CellContentClick += dgvPatients_CellContentClick;
@@ -64,7 +64,7 @@ namespace Hospital_Patient_Records
             btnSave.TabIndex = 2;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
-            btnSave.Click += btnSave_Click;   // ✅ REQUIRED
+            btnSave.Click += btnSave_Click;
             // 
             // rbFit
             // 
@@ -153,9 +153,20 @@ namespace Hospital_Patient_Records
             groupBox2.TabStop = false;
             groupBox2.Enter += groupBox2_Enter;
             // 
+            // btnBack
+            // 
+            btnBack.Location = new System.Drawing.Point(3, 12);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new System.Drawing.Size(93, 34);
+            btnBack.TabIndex = 15;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
             // DoctorHome
             // 
             ClientSize = new System.Drawing.Size(916, 573);
+            Controls.Add(btnBack);
             Controls.Add(groupBox1);
             Controls.Add(groupBox2);
             Controls.Add(label2);
@@ -204,7 +215,7 @@ namespace Hospital_Patient_Records
             MessageBox.Show("Updated");
         }
 
-        
+
 
         private void dgvPatients_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -221,6 +232,7 @@ namespace Hospital_Patient_Records
         private Label label2;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
+        private Button btnBack;
         private Button btnSave;
 
         private void rbAccept_CheckedChanged(object sender, EventArgs e)
@@ -237,5 +249,28 @@ namespace Hospital_Patient_Records
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            // Get the existing Form1 instance
+            Form1 form1 = Application.OpenForms["Form1"] as Form1;
+
+            if (form1 != null)
+            {
+                // Clear the email and password fields
+
+                form1.txtEmail.Text = "";
+                form1.txtPassword.Text = "";
+
+                // Show Form1
+                form1.Show();
+            }
+
+            // Close current form
+            this.Close();
+        }
+
+
     }
 }
+

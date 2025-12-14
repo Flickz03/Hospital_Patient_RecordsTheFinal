@@ -1,4 +1,3 @@
-
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -54,6 +53,7 @@ namespace Hospital_Patient_Records
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new System.Drawing.Size(293, 23);
             txtEmail.TabIndex = 0;
+            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // txtPassword
             // 
@@ -151,13 +151,25 @@ namespace Hospital_Patient_Records
 
         }
 
-        private TextBox txtEmail;
-        private TextBox txtPassword;
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            txtEmail.Text = "";
+            txtPassword.Text = "";
+        }
+
+
+        internal TextBox txtEmail;
+        internal TextBox txtPassword;
         private ComboBox cmbRole;
         private Button btnLogin;
         private Label label1;
         private Label label2;
         private Label label3;
         private Button btnRegister;
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
