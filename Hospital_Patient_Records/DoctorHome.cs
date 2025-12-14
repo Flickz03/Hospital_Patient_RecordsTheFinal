@@ -1,4 +1,4 @@
-
+﻿
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -61,6 +61,7 @@ namespace Hospital_Patient_Records
             btnSave.TabIndex = 2;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;   // ✅ REQUIRED
             // 
             // rbFit
             // 
