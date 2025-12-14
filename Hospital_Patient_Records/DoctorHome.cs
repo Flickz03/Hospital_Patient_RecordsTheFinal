@@ -31,6 +31,9 @@ namespace Hospital_Patient_Records
             label2 = new Label();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
+            dgvPatients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvPatients.MultiSelect = false;
+
             ((System.ComponentModel.ISupportInitialize)dgvPatients).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
