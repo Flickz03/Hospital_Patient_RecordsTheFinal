@@ -18,5 +18,6 @@ namespace Hospital_Patient_Records
         public string Birthday { get; set; }
         public string DoctorNote { get; set; }
         public string FitStatus { get; set; }
+
     }
 }
