@@ -1,4 +1,4 @@
-
+﻿
 using System;
 using System.Windows.Forms;
 
@@ -70,6 +70,7 @@ namespace Hospital_Patient_Records
             txtFirstName.Name = "txtFirstName";
             txtFirstName.Size = new System.Drawing.Size(490, 23);
             txtFirstName.TabIndex = 0;
+            txtFirstName.TextChanged += txtFirstName_TextChanged;
             // 
             // txtMiddleName
             // 
@@ -107,6 +108,8 @@ namespace Hospital_Patient_Records
             btnSignup.TabIndex = 7;
             btnSignup.Text = "Sign Up";
             btnSignup.UseVisualStyleBackColor = true;
+            btnSignup.Click += btnSignup_Click;   // ✅ FIX
+
             // 
             // dtpBirthday
             // 
@@ -293,5 +296,10 @@ namespace Hospital_Patient_Records
         private NumericUpDown numHeight;
         private NumericUpDown numWeight;
         private Label label10;
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

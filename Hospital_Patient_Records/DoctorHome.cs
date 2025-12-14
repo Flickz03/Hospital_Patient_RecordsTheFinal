@@ -35,24 +35,24 @@ namespace Hospital_Patient_Records
             // dgvPatients
             // 
             dgvPatients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPatients.Location = new System.Drawing.Point(100, 115);
+            dgvPatients.Location = new System.Drawing.Point(74, 106);
             dgvPatients.Name = "dgvPatients";
             dgvPatients.RowTemplate.Height = 25;
-            dgvPatients.Size = new System.Drawing.Size(436, 230);
+            dgvPatients.Size = new System.Drawing.Size(487, 256);
             dgvPatients.TabIndex = 0;
             // 
             // txtNote
             // 
-            txtNote.Location = new System.Drawing.Point(53, 468);
+            txtNote.Location = new System.Drawing.Point(55, 473);
             txtNote.Name = "txtNote";
             txtNote.Size = new System.Drawing.Size(552, 23);
             txtNote.TabIndex = 1;
             // 
             // btnSave
             // 
-            btnSave.Location = new System.Drawing.Point(55, 522);
+            btnSave.Location = new System.Drawing.Point(55, 517);
             btnSave.Name = "btnSave";
-            btnSave.Size = new System.Drawing.Size(75, 23);
+            btnSave.Size = new System.Drawing.Size(111, 33);
             btnSave.TabIndex = 2;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@ namespace Hospital_Patient_Records
             // rbNotFit
             // 
             rbNotFit.AutoSize = true;
-            rbNotFit.Location = new System.Drawing.Point(346, 377);
+            rbNotFit.Location = new System.Drawing.Point(446, 377);
             rbNotFit.Name = "rbNotFit";
             rbNotFit.Size = new System.Drawing.Size(61, 19);
             rbNotFit.TabIndex = 4;
@@ -93,7 +93,7 @@ namespace Hospital_Patient_Records
             // rbRefuse
             // 
             rbRefuse.AutoSize = true;
-            rbRefuse.Location = new System.Drawing.Point(346, 418);
+            rbRefuse.Location = new System.Drawing.Point(446, 418);
             rbRefuse.Name = "rbRefuse";
             rbRefuse.Size = new System.Drawing.Size(60, 19);
             rbRefuse.TabIndex = 6;
@@ -105,7 +105,7 @@ namespace Hospital_Patient_Records
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Stencil", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(162, 61);
+            label1.Location = new System.Drawing.Point(171, 61);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(325, 42);
             label1.TabIndex = 7;
@@ -114,7 +114,7 @@ namespace Hospital_Patient_Records
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(53, 450);
+            label2.Location = new System.Drawing.Point(55, 455);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(144, 15);
             label2.TabIndex = 8;
